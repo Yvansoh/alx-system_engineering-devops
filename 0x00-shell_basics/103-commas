@@ -1,2 +1,2 @@
 #!/bin/bash
-(printf '%s\n' . ..; find . -name '[!.]*' -prune -type d -printf '%f/, ' && find . -name '[!.]*' -type f -printf '%f, ') | awk '{sub(/, $/, ""); print}'
+(ls -Ap | grep -E '[0-9a-zA-Z]' | sed 's/$/, /' && ls -Ap | grep -E '^[.]{1,2}$' | sed 's/$/, ') | tr -d '\n' && echo
