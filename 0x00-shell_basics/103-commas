@@ -1,2 +1,2 @@
 #!/bin/bash
-(ls -Ap | grep -E '[0-9a-zA-Z]' | sed 's/$/, /' && ls -Ap | grep -E '^[.]{1,2}$' | sed 's/$/, ') | tr -d '\n' && echo
+ls -amvp
